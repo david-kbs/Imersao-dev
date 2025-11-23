@@ -39,9 +39,3 @@ Este projeto foi construído utilizando tecnologias web padrão:
 OBS:ALGUNS LINKS ESTÃO INDO PARA VÍDEOS INEXISTENTES,DEVIDO AO TEMPO CONSEGUI APENAS COLOCAR POUCOS VIDEOS REAIS
 
 ---
-
-### 💡 Dicas para o seu GitHub
-
-*   **Adicione uma imagem:** Capture uma tela do seu projeto em funcionamento e adicione-a ao README para que os visitantes possam ver como ele é.
-*   **GitHub Pages:** Você pode hospedar este projeto gratuitamente no GitHub Pages para que qualquer pessoa possa acessá-lo online.
-*   **Licença:** Considere adicionar um arquivo `LICENSE` para definir como outras pessoas podem usar seu código.
