@@ -36,21 +36,7 @@ Este projeto foi construído utilizando tecnologias web padrão:
 └── data.json          # Banco de dados com as dicas e links
 ```
 
-## 🔧 Como Executar
-
-Para visualizar o projeto localmente, não é necessário instalar nada. Basta seguir os passos abaixo:
-
-1.  Clone este repositório:
-    ```bash
-    git clone https://github.com/SEU-USUARIO/NOME-DO-REPOSITORIO.git
-    ```
-2.  Navegue até o diretório do projeto:
-    ```bash
-    cd NOME-DO-REPOSITORIO
-    ```
-3.  Abra o arquivo `index.html` no seu navegador de preferência.
-
-E pronto! A página estará funcionando localmente, carregando todas as dicas do arquivo `data.json`.
+OBS:ALGUNS LINKS ESTÃO INDO PARA VÍDEOS INEXISTENTES,DEVIDO AO TEMPO CONSEGUI APENAS COLOCAR POUCOS VIDEOS REAIS
 
 ---
 
