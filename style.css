@@ -1,0 +1,272 @@
+/* Importa a fonte "Bangers" que tem uma pegada de cartoon/jogo, parecida com a do Clash Royale */
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Quicksand:wght@400;500;700&display=swap');
+
+* {
+    box-sizing: border-box; /* Seletor Universal (*): Aplica a regra a todos os elementos. Garante que padding e border não aumentem o tamanho total do elemento. */
+}
+
+:root { /* Pseudo-classe :root: Define variáveis CSS (custom properties) que podem ser reutilizadas em todo o documento. */
+    /* Paleta de cores inspirada no Clash Royale */
+    --cr-blue: #0082e5;      /* Azul do time aliado */
+    --cr-red: #e53935;       /* Vermelho do time inimigo */
+    --cr-gold: #ffd700;      /* Dourado para destaques e recompensas */
+    --cr-wood: #8B4513;      /* Cor de madeira para bordas */
+    --cr-stone: #4a4a4a;     /* Cor de pedra para fundos */
+    --cr-parchment: #fdf5e6; /* Cor de pergaminho para o conteúdo dos cards */
+    --text-light: #ffffff;
+    --text-dark: #333333;
+}
+
+body { /* Seletor de tipo (body): Estiliza o elemento <body>. */
+    margin: 0; /* Remove a margem padrão do navegador. */
+    /* Usando uma textura de madeira como fundo para simular a arena */
+    background-color: #3a2e25;
+    background-image: url('https://www.transparenttextures.com/patterns/wood-pattern.png');
+    color: var(--text-light); /* Define a cor do texto padrão usando a variável --secondary-color. */
+    font-family: "Quicksand", sans-serif; /* Define a família da fonte para 'Quicksand' e uma fonte sans-serif como alternativa. */
+}
+
+header { /* Seletor de tipo (header): Estiliza o elemento <header>. */
+    padding: 2rem 1rem; /* Define o espaçamento interno (2rem em cima/baixo, 1rem nos lados). */
+    display: flex; /* Habilita o layout flexbox para alinhar os itens filhos. */
+    align-items: center; /* Alinha os itens flex verticalmente ao centro. */
+    justify-content: space-around; /* Distribui os itens flex com espaço igual ao redor deles. */
+    position: sticky; /* Mantém o cabeçalho fixo no topo da viewport ao rolar a página. */
+    top: 0; /* Define a posição do topo para o elemento sticky. */
+    /* Fundo de pedra para o cabeçalho */
+    background-color: var(--cr-stone);
+    background-image: url('https://www.transparenttextures.com/patterns/rocky-wall.png');
+    z-index: 10; /* Define a ordem de empilhamento para que o cabeçalho fique sobre outros elementos. */
+    border-bottom: 4px solid var(--cr-wood); /* Borda grossa de madeira */
+    gap: 1rem; /* Define um espaçamento de 1rem entre os elementos flex. */
+}
+
+header h1 { /* Seletor de descendente: Estiliza o <h1> dentro do <header>. */
+    font-family: 'Bangers', cursive; /* Fonte temática para o título principal */
+    font-size: 2.5rem; /* Define o tamanho da fonte. */
+    margin: 0; /* Remove a margem padrão. */
+    color: var(--cr-gold); /* Cor dourada para o título */
+    text-shadow: 2px 2px 4px #000; /* Sombra para destacar o texto */
+    white-space: nowrap; /* Impede que o texto quebre em várias linhas. */
+}
+
+header input { /* Seletor de descendente: Estiliza o <input> dentro do <header>. */
+    padding: 0.375rem 0.75rem; /* Define o espaçamento interno. */
+    border-radius: 1rem; /* Arredonda as bordas do campo de input. */
+    border: 1px solid var(--tertiary-color); /* Define a borda com a cor terciária. */
+    background: var(--cr-parchment); /* Define a cor de fundo. */
+    font-family: inherit; /* Herda a família da fonte do elemento pai. */
+    font-size: 1.5rem; /* Define o tamanho da fonte. */
+    transition: all 0.2s ease; /* Adiciona uma transição suave de 0.2s para todas as propriedades. */
+    width: 30rem; /* Define a largura do campo de input. */
+    color: var(--text-dark); /* Define a cor do texto digitado. */
+    margin-right: .5rem; /* Adiciona uma margem à direita. */
+}
+
+header input::placeholder { /* Pseudo-elemento ::placeholder: Estiliza o texto do placeholder do input. */
+    font-size: 1.2rem; /* Define o tamanho da fonte do placeholder. */
+    font-weight: 300; /* Define o peso da fonte do placeholder (leve). */
+    color: #9d8a71; /* Cor de placeholder mais suave */
+}
+
+header input:focus { /* Pseudo-classe :focus: Estiliza o input quando ele está em foco. */
+    outline: none; /* Remove a borda de foco padrão do navegador. */
+    border-color: var(--cr-gold); /* Muda a cor da borda ao focar. */
+    box-shadow: 0 0 8px var(--cr-gold); /* Adiciona uma sombra para indicar visualmente o foco. */
+}
+
+#botao-busca { /* Seletor de ID: Estiliza o elemento com o id="botao-busca". */
+    padding: 0.75rem 1.5rem; /* Define o espaçamento interno. */
+    border-radius: 8px; /* Bordas menos arredondadas, mais "robustas" */
+    border: 2px solid #c78c40; /* Borda dourada escura */
+    cursor: pointer; /* Muda o cursor para uma mão para indicar que é clicável. */
+    font-family: 'Bangers', cursive; /* Fonte temática */
+    font-size: 1.5rem; /* Define o tamanho da fonte. */
+    white-space: nowrap; /* Impede que o texto do botão quebre em várias linhas. */
+    transition: background-color 0.2s ease, color 0.2s ease; /* Adiciona transições suaves para a cor de fundo e a cor do texto. */
+    background-color: var(--cr-blue); /* Cor de fundo azul */
+    color: var(--text-light); /* Define a cor do texto. */
+    text-shadow: 1px 1px 2px #000; /* Sombra para legibilidade */
+}
+
+#botao-busca:hover { /* Pseudo-classe :hover: Estiliza o botão quando o mouse está sobre ele. */
+    background-color: #009eff; /* Azul mais claro no hover */
+    border-color: var(--cr-gold);
+}
+
+#botao-busca:active { /* Pseudo-classe :active: Estiliza o botão enquanto ele está sendo clicado. */
+    transform: scale(0.98); /* Cria um efeito de clique diminuindo ligeiramente o tamanho do botão. */
+    background-color: #0073c7; /* Azul mais escuro ao clicar */
+}
+
+main { /* Seletor de tipo (main): Estiliza o elemento <main>. */
+    overflow-y: scroll; /* Adiciona uma barra de rolagem vertical se o conteúdo exceder a altura. */
+    max-width: 80rem; /* Define a largura máxima do conteúdo principal. */
+    margin: 0 auto; /* Centraliza o conteúdo principal horizontalmente na página. */
+    margin-top: 2rem; /* Adiciona uma margem no topo. */
+    height: calc(100vh - 10rem - 4rem); /* Calcula a altura para preencher o espaço restante da tela (altura da viewport - altura do header - altura do footer). */
+}
+
+/* Estilo do Card para parecer uma carta do Clash Royale */
+article.card {
+    background-color: var(--cr-parchment);
+    border: 8px solid var(--cr-wood);
+    border-radius: 12px;
+    padding: 1rem;
+    margin-bottom: 1.25rem; /* Adiciona uma margem na parte inferior. */
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+    transition: background-color 0.3s ease, border-bottom-color 0.3s ease; /* Adiciona transições suaves. */
+}
+
+article.card:hover {
+    transform: scale(1.01); /* Aumenta ligeiramente o tamanho do artigo para dar feedback visual. */
+    cursor: pointer; /* Muda o cursor para uma mão para indicar que é interativo. */
+    border-color: #a55d2a; /* Madeira mais clara no hover */
+}
+
+article h2 { /* Seletor de descendente: Estiliza o <h2> dentro de um <article>. */
+    margin-top: 0; /* Remove a margem superior. */
+    font-weight: 600; /* Define o peso da fonte (semi-bold). */
+    font-size: 1.6rem; /* Define o tamanho da fonte. */
+    border-bottom: none; /* Remove a borda inferior. */
+    padding-bottom: 0; /* Remove o espaçamento interno inferior. */
+    margin-bottom: 0.25rem; /* Adiciona uma pequena margem inferior. */
+    color: var(--text-dark); /* Cor do texto escura para contraste com o pergaminho */
+}
+
+article p { /* Seletor de descendente: Estiliza os parágrafos <p> dentro de um <article>. */
+    margin: 0.5rem 0; /* Define a margem superior e inferior. */
+    line-height: 1.6; /* Aumenta a altura da linha para melhor legibilidade. */
+    font-size: 1rem; /* Define o tamanho da fonte. */
+    margin-bottom: 0.5rem; /* Define a margem inferior (sobrescreve a margem definida acima). */
+    color: var(--text-dark); /* Cor do texto escura */
+}
+
+article a { /* Seletor de descendente: Estiliza os links <a> dentro de um <article>. */
+    color: var(--cr-blue); /* Cor do link. */
+    text-decoration: none; /* Remove o sublinhado padrão dos links. */
+    font-weight: bold;
+}
+
+article a:hover { /* Pseudo-classe :hover: Estiliza o link quando o mouse está sobre ele. */
+    text-decoration: underline; /* Adiciona um sublinhado ao passar o mouse para indicar que é um link. */
+}
+
+.footer { /* Seletor de classe: Estiliza o elemento com a class="footer". */
+    position: absolute; /* Define o posicionamento como absoluto em relação ao elemento pai posicionado (neste caso, o body). */
+    bottom: 0; /* Alinha o rodapé na parte inferior da página. */
+    left: 0; /* Alinha o rodapé à esquerda da página. */
+    width: 100%; /* Faz o rodapé ocupar 100% da largura. */
+    color: var(--tertiary-color); /* Define a cor do texto. */
+    background-color: var(--cr-stone);
+    background-image: url('https://www.transparenttextures.com/patterns/rocky-wall.png');
+    padding: 15px 20px; /* Define o espaçamento interno. */
+    border-top: 1px solid #3c4043; /* Adiciona uma borda na parte superior. */
+    font-size: 0.8rem; /* Define o tamanho da fonte. */
+}
+
+.footer-location { /* Seletor de classe: Estiliza o elemento com a class="footer-location". */
+    color: #9aa0a6; /* Define a cor do texto. */
+    margin-bottom: 10px; /* Adiciona uma margem inferior. */
+}
+
+.footer-links { /* Seletor de classe: Estiliza o elemento com a class="footer-links". */
+    list-style: none; /* Remove os marcadores (bolinhas) da lista. */
+    display: flex; /* Habilita o layout flexbox. */
+    flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha se não houver espaço. */
+    justify-content: center; /* Centraliza os itens da lista horizontalmente. */
+    gap: 15px; /* Define um espaçamento de 15px entre os links. */
+}
+
+.footer-links a { /* Seletor de descendente: Estiliza os links <a> dentro de .footer-links. */
+    color: var(--text-light); /* Define a cor do link. */
+    text-decoration: none; /* Remove o sublinhado padrão. */
+    transition: color 0.2s; /* Adiciona uma transição suave para a mudança de cor. */
+}
+
+.footer-links a:hover { /* Pseudo-classe :hover: Estiliza o link do rodapé quando o mouse está sobre ele. */
+    color: var(--cr-gold); /* Muda a cor do link ao passar o mouse (Atenção: a variável --accent-color não foi definida no :root). */
+}
+
+@media (max-width: 768px) { /* Regra @media: Aplica os estilos a seguir apenas em telas com largura máxima de 768px (tablets e celulares). */
+    header { /* Estilos para o cabeçalho em telas menores. */
+        flex-direction: column; /* Organiza os itens do cabeçalho em coluna em vez de linha. */
+        padding: 1rem; /* Reduz o espaçamento interno. */
+    }
+
+    header h1 { /* Estilos para o h1 no cabeçalho em telas menores. */
+        text-align: center; /* Centraliza o texto do título. */
+        margin-bottom: 1rem; /* Adiciona uma margem inferior para separar do campo de busca. */
+    }
+
+    div input { /* Estilos para o input em telas menores. */
+        width: 90vw; /* Define a largura como 90% da largura da viewport. */
+        font-size: 1.2rem; /* Reduz o tamanho da fonte. */
+    }
+
+    main {
+        padding: 0 1rem; /* Adiciona espaçamento lateral para não colar nas bordas da tela. */
+    }
+
+    article:hover { /* Estilos para o article em telas menores. */
+        transform: none; /* Remove o efeito de escala ao passar o mouse, pois pode não ser ideal em dispositivos de toque. */
+    }
+}
+
+@media (max-width: 480px) { /* Regra @media: Aplica os estilos a seguir apenas em telas com largura máxima de 480px (celulares). */
+    header h1 { /* Estilos para o h1 em telas muito pequenas. */
+        font-size: 1rem; /* Reduz ainda mais o tamanho da fonte. */
+        max-width: 70%; /* Define uma largura máxima para evitar que o título ocupe muito espaço. */
+        word-wrap: break-word; /* Permite que palavras longas quebrem para a próxima linha. */
+    }
+
+    div input, /* Seletor agrupado: Aplica a mesma regra para o input e seu placeholder. */
+    div input::placeholder { /* Estilos para o input e seu placeholder em telas muito pequenas. */
+        font-size: 1rem; /* Reduz o tamanho da fonte. */
+    }
+
+    article h2 { /* Estilos para o h2 do article em telas muito pequenas. */
+        font-size: 1.3rem; /* Reduz o tamanho da fonte do título do artigo. */
+    }
+
+    div { /* Estilos para a div do cabeçalho em telas muito pequenas. */
+        display: flex; /* Habilita o layout flexbox. */
+        align-items: center; /* Alinha os itens verticalmente ao centro. */
+        justify-content: center; /* Centraliza os itens horizontalmente. */
+        flex-direction: column; /* Organiza os itens em coluna. */
+        gap: 0.5rem; /* Define um espaçamento menor entre os itens. */
+    }
+
+    .footer { /* Estilos para o rodapé em telas muito pequenas. */
+        display: none; /* Oculta o rodapé para economizar espaço. */
+    }
+
+    button { /* Estilos para o botão em telas muito pequenas. */
+        margin-top: 1rem; /* Adiciona uma margem no topo para separar do input. */
+    }
+}
+
+/* Estilos para a Tela Inicial */
+.tela-inicial {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100%; /* Ocupa toda a altura do container 'main' */
+    padding: 2rem;
+    color: var(--cr-parchment);
+}
+
+.tela-inicial h2 {
+    font-family: 'Bangers', cursive;
+    font-size: 3rem;
+    color: var(--cr-gold);
+    text-shadow: 2px 2px 4px #000;
+    margin-bottom: 1rem;
+}
+
+.rei-image {
+    max-width: 150px; /* Define um tamanho máximo para a imagem */
+    margin-bottom: 1rem;
+}
