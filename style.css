@@ -48,6 +48,7 @@ header h1 { /* Seletor de descendente: Estiliza o <h1> dentro do <header>. */
     color: var(--cr-gold); /* Cor dourada para o título */
     text-shadow: 2px 2px 4px #000; /* Sombra para destacar o texto */
     white-space: nowrap; /* Impede que o texto quebre em várias linhas. */
+    cursor: pointer; /* Indica que o título é clicável */
 }
 
 header input { /* Seletor de descendente: Estiliza o <input> dentro do <header>. */
@@ -99,8 +100,25 @@ header input:focus { /* Pseudo-classe :focus: Estiliza o input quando ele está 
     background-color: #0073c7; /* Azul mais escuro ao clicar */
 }
 
+/* Estilo para o novo botão "Voltar" */
+#botao-voltar {
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    border: 2px solid #b72e2b; /* Borda vermelha escura */
+    cursor: pointer;
+    font-family: 'Bangers', cursive;
+    font-size: 1.5rem;
+    white-space: nowrap;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+    background-color: var(--cr-red); /* Cor de fundo vermelha */
+    color: var(--text-light);
+    text-shadow: 1px 1px 2px #000;
+    margin-left: 0.5rem; /* Espaço entre os botões */
+}
+
+
 main { /* Seletor de tipo (main): Estiliza o elemento <main>. */
-    overflow-y: scroll; /* Adiciona uma barra de rolagem vertical se o conteúdo exceder a altura. */
+    overflow-y: auto; /* Mostra a barra de rolagem vertical APENAS se o conteúdo exceder a altura. */
     max-width: 80rem; /* Define a largura máxima do conteúdo principal. */
     margin: 0 auto; /* Centraliza o conteúdo principal horizontalmente na página. */
     margin-top: 2rem; /* Adiciona uma margem no topo. */
@@ -175,6 +193,7 @@ article a:hover { /* Pseudo-classe :hover: Estiliza o link quando o mouse está 
     display: flex; /* Habilita o layout flexbox. */
     flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha se não houver espaço. */
     justify-content: center; /* Centraliza os itens da lista horizontalmente. */
+    padding: 0; /* Remove o padding padrão da lista */
     gap: 15px; /* Define um espaçamento de 15px entre os links. */
 }
 
@@ -255,6 +274,7 @@ article a:hover { /* Pseudo-classe :hover: Estiliza o link quando o mouse está 
     text-align: center;
     height: 100%; /* Ocupa toda a altura do container 'main' */
     padding: 2rem;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); /* Sombra para melhorar a legibilidade */
     color: var(--cr-parchment);
 }
 
@@ -271,4 +291,62 @@ article a:hover { /* Pseudo-classe :hover: Estiliza o link quando o mouse está 
     margin-bottom: 1rem;
 }
 
+<<<<<<< HEAD
 hgdexghjxdegj
+=======
+/* Estilos para a seção de Destaques na tela inicial */
+.destaques {
+    margin-top: 2rem;
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 1rem;
+    border-radius: 8px;
+    border: 2px solid var(--cr-wood);
+    max-width: 500px;
+    width: 100%;
+}
+
+.footer-section h4 {
+    /* display: none; */ /* Esconde o título "Siga o Clash Royale" */
+}
+
+.footer-bottom {
+    /* display: none; */ /* Esconde a mensagem de "projeto de fã" */
+}
+
+.destaques h3 {
+    font-family: 'Bangers', cursive;
+    font-size: 1.8rem;
+    color: var(--cr-gold);
+    text-shadow: 1px 1px 2px #000;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid #a55d2a;
+    padding-bottom: 0.5rem;
+}
+
+.destaques ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 1.1rem;
+}
+
+.destaques li {
+    padding: 0.5rem 0;
+    border-bottom: 1px dashed #8B4513;
+    cursor: pointer; /* Indica que o item é clicável */
+    transition: background-color 0.2s ease;
+}
+
+.destaques li:hover {
+    background-color: rgba(255, 215, 0, 0.1); /* Leve brilho dourado ao passar o mouse */
+}
+
+.destaques li:last-child {
+    border-bottom: none;
+}
+
+/* Classe utilitária para esconder elementos */
+.hidden {
+    display: none;
+}
